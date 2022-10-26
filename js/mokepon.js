@@ -7,13 +7,14 @@ function selectPlayerPet() {
     let inputHipodoge = document.getElementById("hipodoge");
     let inputCapipepo = document.getElementById("capipepo");
     let inputRatigueya = document.getElementById("ratigueya");
+    let spanPetPlayer = document.getElementById("petPlayerName");
 
     if (inputHipodoge.checked) {
-        alert("Seleccionaste Hipodoge");
+        spanPetPlayer.innerHTML = "Hipodoge";
     } else if (inputCapipepo.checked) {
-        alert("Seleccionaste Capipepo");
+        spanPetPlayer.innerHTML = "Capipepo";
     } else if (inputRatigueya.checked) {
-        alert("Seleccionaste Ratigueya");
+        spanPetPlayer.innerHTML = "Ratigueya";
     } else {
         alert("Debes seleccionar una mascota");
     }
