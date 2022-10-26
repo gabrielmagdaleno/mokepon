@@ -6,46 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOKEPON!</title>
+    <script src="./js/mokepon.js"></script>
 </head>
 
 <body>
     <h1>MOKEPON! 🔥💧🌱</h1>
 
-    <section id="seleccionar-mascota">
+    <section id="select-pet">
         <h2>Elige tu mascota:</h2>
 
         <label for="hipodoge">Hipodoge</label>
-        <input type="radio" id="hipodoge" name="mascota" value="" />
+        <input type="radio" id="hipodoge" name="pet" value="" />
 
         <label for="capipepo">Capipepo</label>
-        <input type="radio" id="capipepo" name="mascota" value="" />
+        <input type="radio" id="capipepo" name="pet" value="" />
 
         <label for="ratigueya">Ratigueya</label>
-        <input type="radio" id="ratigueya" name="mascota" value="" />
+        <input type="radio" id="ratigueya" name="pet" value="" />
 
-        <button>Seleccionar</button>
+        <button id="pet-button">Seleccionar</button>
     </section>
 
-    <section id="seleccionar-ataque">
+    <section id="select-attack">
         <h2>Elige tu ataque:</h2>
 
         <p>Tu mascota tiene <span>3</span> vidas</p>
         <p>La mascota del enemigo tiene <span>3</span> vidas</p>
         <P>
-            <button>Fuego 🔥</button>
-            <button>Agua 💧</button>
-            <button>Tierra 🌱</button>
+            <button id="fire-butoon">Fuego 🔥</button>
+            <button id="water-button">Agua 💧</button>
+            <button id="earth-button">Tierra 🌱</button>
         </P>
     </section>
 
-    <section id="mensajes">
+    <section id="messages">
         <p>Tu nascota atacó con FUEGO, la mascota del enemigo atacó con TIERRA - GANASTE </p>
     </section>
 
-    <section id="reiniciar">
+    <section id="reboot">
         <button>Reiniciar</button>
     </section>
-
 </body>
 
 </html>
