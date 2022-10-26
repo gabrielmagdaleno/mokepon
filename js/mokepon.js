@@ -4,11 +4,15 @@ function startGame() {
 }
 
 function selectPlayerPet() {
-    if (hipodoge.checked) {
+    let inputHipodoge = document.getElementById("hipodoge");
+    let inputCapipepo = document.getElementById("capipepo");
+    let inputRatigueya = document.getElementById("ratigueya");
+
+    if (inputHipodoge.checked) {
         alert("Seleccionaste Hipodoge");
-    } else if (capipepo.checked) {
+    } else if (inputCapipepo.checked) {
         alert("Seleccionaste Capipepo");
-    } else if (ratigueya.checked) {
+    } else if (inputRatigueya.checked) {
         alert("Seleccionaste Ratigueya");
     } else {
         alert("Debes seleccionar una mascota");
