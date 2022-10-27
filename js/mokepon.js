@@ -1,5 +1,7 @@
 let playerAttack;
 let enemyAttack;
+let playerLives = 3;
+let enemyLives = 3;
 
 function startGame() {
     let playerPetButton = document.getElementById("pet-button");
@@ -69,10 +71,35 @@ function enemyRandomAttack() {
         enemyAttack = "TIERRA";
     }
 
-    createMessage();
+    fight();
 }
 
-function createMessage() {
+function fight() {
+    let spanPlayerLives = document.getElementById("playerLives");
+    let spanEnemyLives = document.getElementById("enemyLives");
+
+    if (enemyAttack == playerAttack) {
+        createMessage("EMPATE");
+    } else if (playerAttack == "FUEGO" && enemyAttack == "TIERRA") {
+        createMessage("GANASTE");
+        enemyLives--;
+        spanEnemyLives.innerHTML = enemyLives;
+    } else if (playerAttack == "AGUA" && enemyAttack == "FUEGO") {
+        createMessage("GANASTE");
+        enemyLives--;
+        spanEnemyLives.innerHTML = enemyLives;
+    } else if (playerAttack == "TIERRA" && enemyAttack == "AGUA") {
+        createMessage("GANASTE");
+        enemyLives--;
+        spanEnemyLives.innerHTML = enemyLives;
+    } else {
+        createMessage("PERDISTE");
+        playerLives--;
+        spanPlayerLives.innerHTML = playerLives;
+    }
+}
+
+function createMessage(result) {
     let sentenceSection = document.getElementById("messages");
 
     let sentence = document.createElement("p");
@@ -81,7 +108,8 @@ function createMessage() {
         playerAttack +
         " , la mascota del enemigo atacó con " +
         enemyAttack +
-        " - PENDIENTE";
+        " - " +
+        result;
 
     sentenceSection.appendChild(sentence);
 }
