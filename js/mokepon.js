@@ -97,6 +97,16 @@ function fight() {
         playerLives--;
         spanPlayerLives.innerHTML = playerLives;
     }
+
+    verifyLives();
+}
+
+function verifyLives() {
+    if (enemyLives == 0) {
+        createFinalMessage("FELICIDADES! GANASTE 😎🎉🎊🎆🎇");
+    } else if (playerLives == 0) {
+        createFinalMessage("LO SIENTO! PERDISTE 😒😭🤬💀💩");
+    }
 }
 
 function createMessage(result) {
@@ -110,6 +120,15 @@ function createMessage(result) {
         enemyAttack +
         " - " +
         result;
+
+    sentenceSection.appendChild(sentence);
+}
+
+function createFinalMessage(finalResult) {
+    let sentenceSection = document.getElementById("messages");
+
+    let sentence = document.createElement("p");
+    sentence.innerHTML = finalResult;
 
     sentenceSection.appendChild(sentence);
 }
