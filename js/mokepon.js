@@ -46,15 +46,15 @@ function selectEnemyPet() {
 }
 
 function fireAttack() {
-    playerAttack = "FIRE";
+    playerAttack = "FUEGO";
     enemyRandomAttack();
 }
 function waterAttack() {
-    playerAttack = "WATER";
+    playerAttack = "AGUA";
     enemyRandomAttack();
 }
 function earthAttack() {
-    playerAttack = "EARTH";
+    playerAttack = "TIERRA";
     enemyRandomAttack();
 }
 
@@ -62,12 +62,28 @@ function enemyRandomAttack() {
     let randomAttack = random(1, 3);
 
     if (randomAttack == 1) {
-        enemyAttack = "FIRE";
+        enemyAttack = "FUEGO";
     } else if (randomAttack == 2) {
-        enemyAttack = "WATER";
+        enemyAttack = "AGUA";
     } else {
-        enemyAttack = "EARTH";
+        enemyAttack = "TIERRA";
     }
+
+    createMessage();
+}
+
+function createMessage() {
+    let sentenceSection = document.getElementById("messages");
+
+    let sentence = document.createElement("p");
+    sentence.innerHTML =
+        "Tu mascota atacó con " +
+        playerAttack +
+        " , la mascota del enemigo atacó con " +
+        enemyAttack +
+        " - PENDIENTE";
+
+    sentenceSection.appendChild(sentence);
 }
 
 function random(min, max) {
