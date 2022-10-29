@@ -29,7 +29,7 @@ function selectPlayerPet() {
     sectionSelectPet.style.display = "none";
 
     let sectionSelectAttack = document.getElementById("select-attack");
-    sectionSelectAttack.style.display = "block";
+    sectionSelectAttack.style.display = "flex";
 
     let inputHipodoge = document.getElementById("hipodoge");
     let inputCapipepo = document.getElementById("capipepo");

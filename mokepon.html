@@ -12,9 +12,9 @@
 
 <body>
     <section id="select-pet">
-        <h1 class="title">MOKEPON</h1>
+        <h1 class="title">Mokepon</h1>
 
-        <h2 class="sub-title">Elige tu mascota:</h2>
+        <h2 class="subtitle">Elige tu mascota:</h2>
 
         <div class="cards">
             <label class="tarjeta-mokepon" for="hipodoge">
@@ -41,21 +41,30 @@
     </section>
 
     <section id="select-attack">
-        <h2>Elige tu ataque:</h2>
+        <h1 class="title">Mokepon</h1>
 
-        <p>Tu mascota <span id="petPlayerName"></span> tiene <span id="playerLives">3</span> vidas</p>
-        <p>La mascota <span id="petEnemyName"></span> del enemigo tiene <span id="enemyLives">3</span> vidas</p>
-        <P>
-            <button id="fire-button">Fuego 🔥</button>
-            <button id="water-button">Agua 💧</button>
-            <button id="earth-button">Tierra 🌱</button>
-        </P>
-    </section>
+        <h2 class="subtitle">Elige tu ataque:</h2>
 
-    <section id="messages"></section>
+        <div>
+            <P>
+                <button id="fire-button" class="attack-btn">Fuego 🔥</button>
+                <button id="water-button" class="attack-btn">Agua 💧</button>
+                <button id="earth-button" class="attack-btn">Tierra 🌱</button>
+            </P>
+        </div>
 
-    <section id="reboot">
-        <button>Reiniciar</button>
+        <div>
+            <section id="messages"></section>
+            <section id="reboot">
+                <button>Reiniciar</button>
+            </section>
+        </div>
+
+        <div>
+            <p>Tu mascota <span id="petPlayerName"></span> tiene <span id="playerLives">3</span> vidas</p>
+            <p>La mascota <span id="petEnemyName"></span> del enemigo tiene <span id="enemyLives">3</span> vidas</p>
+        </div>
+
     </section>
 </body>
 
